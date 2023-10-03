@@ -176,3 +176,74 @@
     margin: auto;
     margin-bottom: 1rem;
 }
+
+
+
+
+
+#resultados-prediccion{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.438);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container-resultados{
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#container-resultados p{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+@keyframes rotar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.loader{
+    width: 50px !important;
+    height: 50px !important;
+    margin: auto;
+    border-top: 5px solid #bbbbbb !important;
+    border-bottom: 5px solid #bbbbbb !important;
+    border-right: 5px solid #bbbbbb !important;
+    border-left: 5px solid hsl(251, 100%, 97%) !important;
+    border-radius: 50%;
+    animation: rotar 1s infinite linear;
+}
+
+
+.hide-loader{
+    display: none !important;
+}
+
+
+#container-resultados > a{
+    text-decoration: none;
+    padding: 0.4rem;
+    background-color: rgb(63, 98, 255);
+    width: 100%;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+}

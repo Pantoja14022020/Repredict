@@ -81,19 +81,31 @@ btnResultados.addEventListener('click', e => {
             "paecda": i23
         }
 
-        console.log(entradas)
+        entradas = JSON.stringify(entradas)
         
+        const resultadosPrediccion = document.getElementById('resultados-prediccion');
+        resultadosPrediccion.classList.remove('hide');
+
         $.ajax({
             url: "https://api-ec-django.onrender.com/predecirER/",
             type: 'POST',
             data: entradas,
             success: function({prediccion}) {
-              
-                console.log(prediccion)
+                const result = (prediccion == 1) ? "Positivo" : "Negativo";
 
+                const resultInnerHTML = `
+                    <div id="container-resultados">
+                        <img src="./assets/virus.png" alt="virus" />
+                        <p id="result-text">${result}</p>
+                        <a href="index.html">Reiniciar</a>
+                    </div>
+                `;
+
+                resultadosPrediccion.innerHTML = '';
+                resultadosPrediccion.innerHTML = resultInnerHTML;
             },
             error: function(xhr, status, error) {
-              console.log("No se pudo hacer la peticion")
+              console.log(error, xhr, status)
             }
           });
 
