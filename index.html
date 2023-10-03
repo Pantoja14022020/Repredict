@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respredict</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="hero">
+      <div>
+        <img src="./assets/lupa.png" alt="lupa" id="lupa" />
+        <img src="./assets/virus.png" alt="virus" id="virus" />
+      </div>
+      <h1>Resp<span>redict</span></h1>
+    </div>
+    <div id="modal-info" class="hide">
+      <div id="modal-container">
+        <img src="./assets/informacion.png" alt="informacion" />
+        Toda la información recopilada sera guardado para fines de investigación
+        <button id="acuerdoBtn">Estoy de acuerdo</button>
+      </div>
+    </div>
+    <div id="formulario" class="hide">
+      <header id="header-form">
+        <img src="./assets/neumonia.png" alt="er" />
+      </header>
+      <div id="form-preguntas">
+        <form action="#" id="form-questions">
+          <div class="question" id="edad-input">
+            <label for="edad">Edad</label>
+            <input
+              type="number"
+              id="edad"
+              class="text-input edad-input-txt"
+              min="18"
+              max="100"
+              placeholder="Ingresa tu edad"
+            />
+          </div>
+          <div class="question">
+            <label for="inputState">Género</label>
+            <select id="inputState" class="input-select 2_i">
+              <option value="0" selected>Mujer</option>
+              <option value="1">Hombre</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">Estado Civil</label>
+            <select id="inputState" class="input-select 3_i">
+              <option value="1" selected>Soltero</option>
+              <option value="2">Casado</option>
+              <option value="3">Divorciado</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">Ocupación</label>
+            <select id="inputState" class="input-select 4_i">
+              <option value="0" selected>Estudiante</option>
+              <option value="1">Empleado</option>
+              <option value="2">Ama de casa</option>
+              <option value="3">Enfermera</option>
+              <option value="4">Campesino</option>
+              <option value="5">Medico</option>
+              <option value="6">Ingeniero</option>
+              <option value="7">Albañil</option>
+              <option value="8">Docente</option>
+              <option value="9">Administrativo</option>
+              <option value="10">Chofer u operador</option>
+              <option value="11">Guardia</option>
+              <option value="12">Desempleado</option>
+              <option value="13">Mecanico</option>
+              <option value="14">Estilista</option>
+              <option value="15">Veterinario</option>
+              <option value="16">Comerciante</option>
+              <option value="17">Carpintero</option>
+              <option value="18">Abogado</option>
+              <option value="19">Quimico</option>
+              <option value="20">Diseñador grafico</option>
+              <option value="21">Arquitecto</option>
+              <option value="22">Psicologo</option>
+              <option value="23">Petrolero</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >Tiempo de residencia en su domicilio actual</label
+            >
+            <select id="inputState" class="input-select 5_i">
+              <option value="0" selected>Mas de 5 años</option>
+              <option value="1">Toda su vida</option>
+              <option value="2">Otro</option>
+              <option value="3">Mas de 2 años</option>
+              <option value="4">1 año</option>
+              <option value="5">Menos de un año</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Se enferma seguido de las vias respiratorias?</label
+            >
+            <select id="inputState" class="input-select 6_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">¿A que lo atribuye?</label>
+            <select id="inputState" class="input-select 7_i">
+              <option value="0">A los cambios de temperatura</option>
+              <option value="1">A la contaminación</option>
+              <option value="2">A las alergias</option>
+              <option value="3" selected>No se enferma frecuentemente</option>
+              <option value="4">Mala alimentacion</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">¿Cuantas vacunas covid se puso?</label>
+            <select id="inputState" class="input-select 8_i">
+              <option value="0" selected>1,2 y refuerzo</option>
+              <option value="1">1 y 2 dosis</option>
+              <option value="2">No se vacuno</option>
+              <option value="3">1 dosis</option>
+              <option value="4">Cansino</option>
+              <option value="5">Moderna</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Usted o alguien cercano padeció covid?</label
+            >
+            <select id="inputState" class="input-select 9_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">¿Requirio hospitalización?</label>
+            <select id="inputState" class="input-select 10_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >En casa ¿Cocinan o cocinarón con leña?</label
+            >
+            <select id="inputState" class="input-select 11_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">En casa ¿Alguien o usted fuma?</label>
+            <select id="inputState" class="input-select 12_i">
+              <option value="0" selected>Alguien de la familia</option>
+              <option value="1">No</option>
+              <option value="2">Yo</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >En su familia ¿Hay alguien con una enfermedad cronica?</label
+            >
+            <select id="inputState" class="input-select 13_i">
+              <option value="0" selected>Ninguna</option>
+              <option value="1">Cancer</option>
+              <option value="2">Diabetes Mellitus</option>
+              <option value="3">Enfermedad Cardiaca</option>
+              <option value="4">Hipertensión arterial</option>
+              <option value="5">EPOC</option>
+              <option value="6">Osteoporosis</option>
+              <option value="7">Anemia</option>
+              <option value="8">Asma</option>
+              <option value="9">Insuficiencia Renal Crónica</option>
+              <option value="10">Neumonia</option>
+              <option value="11">Enfermedad de la piel</option>
+              <option value="12">Bronquitis</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Cual es el origen del agua para beber?</label
+            >
+            <select id="inputState" class="input-select 14_i">
+              <option value="0" selected>Embotelladora local</option>
+              <option value="1">Embotelladora de marca</option>
+              <option value="2">De la llave</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">¿Origen del agua para cocinar?</label>
+            <select id="inputState" class="input-select 15_i">
+              <option value="0" selected>Embotelladora local</option>
+              <option value="1">Embotelladora de marca</option>
+              <option value="2">De la llave</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >Dentro de tu familia ¿Hay alguien con algun padecimiento en
+              relación al agua?</label
+            >
+            <select id="inputState" class="input-select 16_i">
+              <option value="0" selected>Ninguna</option>
+              <option value="1">Piedras en riñon</option>
+              <option value="2">Insuficiencia renal</option>
+              <option value="3">Cancer de riñon</option>
+              <option value="4">Irritación de mucosas</option>
+              <option value="5">Quistes renales</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Considera su vida estresante tanto que lo ha afectado laboral,
+              social y personal?</label
+            >
+            <select id="inputState" class="input-select 17_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Siente ansiedad o nerviosismo o deseos de comer todo el
+              tiempo?</label
+            >
+            <select id="inputState" class="input-select 18_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState">¿Como considera su autoestima?</label>
+            <select id="inputState" class="input-select 19_i">
+              <option value="0" selected>Baja</option>
+              <option value="1">Media</option>
+              <option value="2">Alta</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >En los ultimos 6 meses ¿Ha perdido interes en actividades que
+              consideraba agradables?</label
+            >
+            <select id="inputState" class="input-select 20_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+              <option value="2">No se habia puesto a pensar en eso</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Se ha sentido cansado mas de lo normal incluso sin haber hecho
+              actividad fisica o que no pueda dormir?</label
+            >
+            <select id="inputState" class="input-select 21_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Su estado de animo cambia repentinamente?</label
+            >
+            <select id="inputState" class="input-select 22_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <div class="question">
+            <label for="inputState"
+              >¿Padece alguna enfermedad crónica que no sea enfermedad
+              respiratoria?
+            </label>
+            <select id="inputState" class="input-select 23_i">
+              <option value="0" selected>No</option>
+              <option value="1">Si</option>
+            </select>
+          </div>
+          <button type="submit" id="btnResultados">Obtener Resultados</button>
+        </form>
+      </div>
+    </div>
+    <div id="modal-error" class="hide">
+      <div id="modal-error-container">
+        <img src="./assets/error.png" alt="error" />
+        <p>Error en el campo edad</p>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./modales-validacion.js"></script>
+  </body>
+</html>

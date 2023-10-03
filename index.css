@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+.hide{
+    transform: translateX(-100%) !important;
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+}
+#hero h1{
+    margin-top: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    color: rgb(153, 153, 153);
+}
+#hero h1 > span{
+    color: rgb(163, 52, 197);
+}
+#lupa{
+    width: 50px;
+    height: 50px;
+}
+#virus{
+    width: 30px;
+    height: 30px;
+    margin-left: -1rem;
+}
+
+
+
+
+
+#modal-info{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.363);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal-container{
+    width: 80%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgb(29, 27, 27);
+}
+#modal-container img{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+#modal-container > button{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: rgb(11, 11, 12);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+
+
+
+#formulario{
+    width: 100%;
+}
+#header-form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(63, 98, 255);
+    padding: 2rem;
+}
+#header-form img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+
+#form-preguntas{
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    margin-top: -2rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.question{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.question label{
+    margin-bottom: 0.5rem;
+}
+.question input{
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid rgb(63, 98, 255);
+    border-radius: 0.3rem;
+    color: rgb(63, 98, 255);
+}
+.question select{
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid rgb(63, 98, 255);
+    background-color: white;
+    border-radius: 0.3rem;
+    color: rgb(63, 98, 255);
+}
+
+
+
+#btnResultados{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border: none;
+    background-color: rgb(63, 98, 255);
+    border-radius: 0.4rem;
+    color: white;
+}
+
+
+
+#modal-error{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+#modal-error-container{
+    background-color: white;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+#modal-error img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
