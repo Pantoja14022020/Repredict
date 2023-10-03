@@ -106,12 +106,12 @@
             <label for="inputState"
               >¿Se enferma seguido de las vias respiratorias?</label
             >
-            <select id="inputState" class="input-select 6_i">
+            <select id="inputState" class="input-select 6_i vias_res">
               <option value="0" selected>No</option>
               <option value="1">Si</option>
             </select>
           </div>
-          <div class="question">
+          <div class="question hide-question" id="a_que_atribuye">
             <label for="inputState">¿A que lo atribuye?</label>
             <select id="inputState" class="input-select 7_i">
               <option value="0">A los cambios de temperatura</option>
@@ -136,12 +136,12 @@
             <label for="inputState"
               >¿Usted o alguien cercano padeció covid?</label
             >
-            <select id="inputState" class="input-select 9_i">
+            <select id="inputState" class="input-select 9_i padecio_covid">
               <option value="0" selected>No</option>
               <option value="1">Si</option>
             </select>
           </div>
-          <div class="question">
+          <div class="question hide-question" id="hospitalizacion">
             <label for="inputState">¿Requirio hospitalización?</label>
             <select id="inputState" class="input-select 10_i">
               <option value="0" selected>No</option>
@@ -299,6 +299,6 @@
       <div id="loader-animation" class="loader"></div>
     </div>
     <script src="./index.js"></script>
-    <script src="./modales-validacion.js"></script>
+    <script src="./flujo_preguntas.js"></script>
   </body>
 </html>

@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(63, 98, 255);
+    background-color: #3f62ff;
     padding: 2rem;
 }
 #header-form img{
@@ -246,4 +246,8 @@
     font-size: 0.9rem;
     border-radius: 0.3rem;
     margin-top: 0.5rem;
+}
+
+.hide-question{
+    display: none !important;
 }
