@@ -189,8 +189,17 @@
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#resultados-prediccion > div{
+    background-color: white;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+}
+#resultados-prediccion p{
+    margin-top: 0.5rem;
 }
 #container-resultados{
     background-color: white;
